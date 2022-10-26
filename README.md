@@ -19,15 +19,16 @@ If you use any of our tools and datasets, please cite our paper.
 # Files and folders description
 1. **Crunchbase_crawler:** A folder that holds the crunchbase crawler that we developed and used to map the TLD+1 domains to their corresponding legal entity according to crunchbase website and identify their future merging.
 2. **Datasets:** Folder that contains tha edge-lists and the hyperbolic embeddings of the two networks (Legal-entities and TLD+1).
-3. **Figure2:** *(Hyperbolic map of the legal-entities network.)* The folder includes all necessary files and instructions on how to recompute the results and reproduce figure 2 of the paper.
-4. **Figure3:** *( Grouping probabilities...)* The folder includes all necessary files and instructions on how to recompute the results and reproduce figures 3 in the paper.
-5. **Figure4:** *(Complimentarities (Comp.) Vs. Similarities... )* The folder includes all necessary files and instructions on how to recompute the results and reproduce figure 4 in the paper.
-6. **Figure5:** *(Co-hosting probability...)* The folder includes all necessary files and instructions on how to recompute the results and reproduce figure 5 in the paper.
-7. **Figure6:** *(Distribution of interaction path...)* The folder includes all necessary files and instructions on how to recompute the results and reproduce figure 6 in the paper.
-8. **FQDN_Map.json:** A json file that holds the mapping between the Fully Qualified Domain Names (FQDN) that we observe in our dataset and their corresponding TLD+1 domain that they belong.
-9. **raw_data.zip:** The raw data that we use in the paper. The provided .zip file needs to be extracted to generate the "raw_data.csv" file. The extracted .csv file needs to be places in the root folder of the repository.
-10. **raw_data_loader.ipynb:** A sample jupyter ipython notebook that loads and describes the raw data of the paper.
-11. **README.md:** This file.
+3. **Figure3:** *(Hyperbolic map of the legal-entities network.)* The folder includes all necessary files and instructions on how to recompute the results and reproduce figure 2 of the paper.
+4. **Figure4:** *( Grouping probabilities...)* The folder includes all necessary files and instructions on how to recompute the results and reproduce figures 3 in the paper.
+5. **Figure5:** *(Complimentarities (Comp.) Vs. Similarities... )* The folder includes all necessary files and instructions on how to recompute the results and reproduce figure 4 in the paper.
+6. **Figure6:** *(Co-hosting probability...)* The folder includes all necessary files and instructions on how to recompute the results and reproduce figure 5 in the paper.
+7. **Figure7:** *(Distribution of interaction path...)* The folder includes all necessary files and instructions on how to recompute the results and reproduce figure 6 in the paper.
+8. **Figure8_9:** *(Appendix figures)* The folder includes all necessary files and instructions on how to recompute the results and reproduce figure 8 and 9 in the appendix of the paper.
+9. **FQDN_Map.json:** A json file that holds the mapping between the Fully Qualified Domain Names (FQDN) that we observe in our dataset and their corresponding TLD+1 domain that they belong.
+10. **raw_data.zip:** The raw data that we use in the paper. The provided .zip file needs to be extracted to generate the "raw_data.csv" file. The extracted .csv file needs to be places in the root folder of the repository.
+11. **raw_data_loader.ipynb:** A sample jupyter ipython notebook that loads and describes the raw data of the paper.
+12. **README.md:** This file.
 
 # Additional notes
 1. To recompute the results and recreate the paper figures from scratch you can start from the folder of Figure 2 up to the folder of Folder 6 in increasing order. Note that we already include the results for each individual figure (including any necessary intermediate results) if you choose to partially reproduce any of them individually and out of order. 

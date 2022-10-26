@@ -1,27 +1,30 @@
-# Figure 3: (a) Grouping probability as a function of the hyperbolic distance between TLD+1 nodes. (b) Future grouping probability as a function of the hyperbolic distance between TLD+1 nodes.
+# Figure 2: Hyperbolic map of the legal-entities network.
+This folder includes the artifacts to recompute the results and reproduce figure 2 in the paper. The folder also includes the visualization tool available under the folder "./D3_plot/".
 
-This folder includes the artifacts to recompute the results and reproduce figure 3 in the paper. The tool to build the "future-mergings_list.json" metadata is available under the folder "./Crunchbase_crawler/".
+# Folders and files descriptions
+1. **D3_plot:** The folder that contains the visualization tool to create Figure 2 (Hyperbolic map of the legal-entities network).
+2. **metadata:** The folder that contains the required metadata to recompute the results and recreate the Figure 2.
+3. **HyperMap.ipynb:** The ipython notebook to recompute the results and recreate Figure 2.
+4. **README.md:** This file.
+    
+# Recreation of Figure 2 - Hyperbolic map
+Use the following instructions to recompute the results and recreate figure 2 - **Hyperbolic map of the legal-entities network**. For each step we provide different alternative options. Feel free to skip any step since we already provide the results (inputs) required at each step.
 
-# Files description
-1. **Grouping_probability.ipynb:** A jupyter ipython notebook that recomputes the results and recreates the Figure 3(a) in the paper.
-2. **future-mergings_list.json:** A json file that holds the mapping of the TLD+1 nodes to their corresponding legal-entity *according to the crunchbase website*.
-3. **legal-entities_list.json:** A json file that holds the mapping of the TLD+1 nodes to their corresponding legal-entity.
-4. **Grouping_probability_future.ipynb:** A jupyter ipython notebook that recomputes the results and recreates the Figure 3(b) in the paper.
-5. **README.md:** This file.
+**Step 1:** You can use the network edge-list to create the Hyperbolic embeddings of the network yourself or you can use the already create hyperbolic embeddings of the network. More details related to the two available options are provided below:
 
-# Result files
-The output of the **Grouping_probability.ipynb** ipython notebook is the following 2 files:
+> **Option 1.1:** You can use the Edge-list available at '../Datasets/EdgeList_Legal_Entities.txt' and the Mercator (https://github.com/networkgeometry/mercator) tool to create the hyperbolic embeddings yourself (using the default options of the Mercator tool). 
 
-*  **Grouping_probability_step_3.pdf:** The figure 3(a) - *Grouping probability as a function of the hyperbolic distance between TLD+1 nodes.*
-*  **../Figure4/Bins_Stats_EdgeList_TLD_step_3.json:** A json file to use as a source file to create figure 4(a). Note that the file is saved under the Figure4 folder.
+> **Option 1.2:** You can use the already created hyperbolic embedding available at '../Datasets/EdgeList_Legal_Entities.inf_coord'
 
-The output of the **Grouping_probability_future.ipynb** ipython notebook is the following 2 files:
+**Step 2:** Using the output file of the Mercator (the resulting hyperbolic embedding file available here: '../Datasets/EdgeList_Legal_Entities.inf_coord') you can then use the iPython notebook './HyperMap.ipynb' to preprocess and annotate each node of the network with the different metadata that we provide prior to the visualization step. Again, we provide two different options for this step: 
 
-*  **Grouping_probability_Future_step_6.pdf:** The figure 3(b) - *Future grouping probability as a function of the hyperbolic distance between TLD+1 nodes.*
-*  **../Figure4/Bins_Stats_EdgeList_TLD_FUTURE_step_6.json:** A json file to use as a source file to create figure 4(b). Note that the file is saved under the Figure4 folder.
+> **Option 2.1:** Follow the instructions provided as inline comments in each cell of the iPython notebook available at './HyperMap.ipynb'. The final output of the HyperMap.ipynb is available at '../Datasets/EdgeList_Legal_Entities.inf_coord.json'.  
+
+> **Option 2.2:** You can use the already annotated output file of the iPython notebook './HyperMap.ipynb' available at '../Datasets/EdgeList_Legal_Entities.inf_coord.json'
+
+**Step 3:** To visualize the Hyperbolic Map of the Legal-entities network you can use the code available at './D3_plot' folder. For more details please check the provided manual of the tool available at "./D3_plot/Manual.pdf".
 
 # Additional notes
-*Grouping_probability.ipynb* and *Grouping_probability_future.ipynb* requires the following python packages:
-> 1. tqdm - https://pypi.org/project/tqdm/
-> 2. matplotlib - https://pypi.org/project/matplotlib/
-> 3. numpy - https://pypi.org/project/numpy/
+*HyperMap.ipynb:* ipython notebook requires the following python packages:
+> 1. pandas - https://pypi.org/project/pandas/
+> 2. networkx - https://pypi.org/project/networkx/
